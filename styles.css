@@ -1,0 +1,17 @@
+h1 {
+    color: red;
+}
+.form-wrapper {
+    margin: 0 auto;
+}
+.submitButton {
+    border-radius: 15px;
+    color: purple;
+    background-color: aquamarine;
+    font-family: monospace;
+    border-color: darksalmon;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 100%;
+    text-align: center;
+}
