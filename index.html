@@ -11,7 +11,8 @@
 </head>
 
 <body>
-    <h1>Formularios</h1>
+    <h1>Payment form</h1>
+    <h4 class="container-fluid">Some fields are missing</h4>
     <div class="container-fluid">
         <div class="form-wrapper">
             <form class="p-3 border border-secondary">
@@ -20,21 +21,24 @@
                         <label for="Card">
                             Card #
                         </label>
-                        <input name="Card" type="text" pattern="[0-24]" value="" minlength="24" maxlength="24" placeholder="XXXXXXXXXXXXXXXXXXXXXXXX" required/>
+                        <input name="Card" type="text" pattern="[0-24]" value="" minlength="24" maxlength="24"
+                            placeholder="XXXXXXXXXXXXXXXXXXXXXXXX" required />
 
                     </div>
                     <div class="d-flex flex-column mb-3 col-12 col-md-6 col-lg-3">
                         <label for="CVC">
                             CVC #
                         </label>
-                        <input name="CVC" type="text" pattern="[0-4]" value="" minlength="4" maxlength="4" placeholder="0000" required/>
+                        <input name="CVC" type="text" pattern="[0-4]" value="" minlength="4" maxlength="4"
+                            placeholder="0000" required />
                     </div>
 
                     <div class="d-flex flex-column mb-3 col-12 col-md-6 col-lg-4">
                         <label for="Amount">
                             Amount $
                         </label>
-                        <input name="Amount" type="text" pattern="[1-2000]" value="" minlength="1" placeholder="" required/>
+                        <input name="Amount" type="text" pattern="[1-2000]" value="" minlength="1" placeholder=""
+                            required />
                     </div>
                 </div>
 
@@ -63,44 +67,68 @@
                     </div>
 
                     <div class="d-flex flex-column mb-3 col-12 col-md-6 col-lg-3">
-                        <label for="Phone">
-                            Phone
+                        <label for="State">
+                            State
                         </label>
-                        <input name="Phone" type="text" pattern="[0-9]" value="" minlength="25" maxlength="50" />
+                        <select name="State">
+                            <option value="Oregon">Oregon </option>
+                            <option value="Delaware">Delaware</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Georgia">Georgia</option>
+                        </select>
                     </div>
 
                     <div class="d-flex flex-column mb-3 col-12 col-md-6 col-lg-3">
-                        <label for="Phone">
-                            Phone
+                        <label for="Postalcode">
+                            Postal Code
                         </label>
-                        <input name="Phone" type="text" pattern="[0-9]" value="" minlength="25" maxlength="50" />
+                        <input name="Postalcode" type="text" pattern="[5]" value="" minlength="4" maxlength="4"
+                            placeholder="0000" required />
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="d-flex flex-column mb-3 col-12 col-md-6 col-lg-6">
-                        <label for="Password">
-                            Password
+                <div class="row container-fluid">
+                    <div class="d-flex flex-column col-12 col-md-3 col-lg-3 mr-auto">
+                        <label for="radiostarjet">
+                            We accept:
                         </label>
-                        <input name="Password" type="password" value="" minlength="8" required />
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-secondary">
+                                <input autocomplete="off" checked id="blue" name="options" type="radio">
+                                <i class="fa-brands fa-cc-mastercard"></i>
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input autocomplete="off" id="red" name="options" type="radio">
+                                <i class="fab fa-cc-visa"></i>
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input autocomplete="off" id="green" name="options" type="radio">
+                                <i class="fab fa-cc-diners-club"></i>
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input autocomplete="off" id="yellow" name="options" type="radio">
+                                <i class="fab fa-cc-amex"></i>
+                            </label>
+                        </div>
                     </div>
 
-                    <div class="d-flex flex-column mb-3 col-12 col-md-6 col-lg-6">
-                        <label for="Phone">
-                            Phone
+                    <div class="col-md-6 col-lg-6 justify-content-end ms-auto">
+                        <label for="Message">
+                            Message
                         </label>
-                        <input name="Phone" type="text" pattern="[0-9]" value="" minlength="25" maxlength="50" />
+                        <textarea class="form-control" id="Message" rows="4"></textarea>
+                        <small class="text-muted">Add any notes here.</small>
                     </div>
                 </div>
-
-
-
-
-
-
-                <input class="submitButton" type="submit" />
-            </form>
-        </div>
+    </div>
+    <div class="container-fluid" id="buttons">
+    <div class="buttons col-12 col-md-1 col-lg-1 ms-auto">
+    <input class="submitButton1" type="submit" value="Send"/>
+    <input class="submitButton2" type="submit" value="Cancel"/>
+    </form>
+    </div>
+</div>
+    </div>
     </div>
 
 
