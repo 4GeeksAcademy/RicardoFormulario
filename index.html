@@ -12,135 +12,138 @@
 </head>
 
 <body>
-    <h1>Payment form</h1>
-    <h4 class="container-fluid">Some fields are missing</h4>
-    <div class="container-fluid">
-        <div class="form-wrapper">
-            <form class="p-3 border border-secondary">
-                <div class="row">
-                    <div class="d-flex flex-column mb-3 col-12 col-md-6 col-lg-5">
-                        <label for="Card">
-                            Card #
-                        </label>
-                        <input name="Card" type="text" pattern="[0-24]" value="" minlength="24" maxlength="24"
-                            placeholder="XXXXXXXXXXXXXXXXXXXXXXXX" required />
-
-                    </div>
-                    <div class="d-flex flex-column mb-3 col-12 col-md-6 col-lg-3">
-                        <label for="CVC">
-                            CVC #
-                        </label>
-                        <input name="CVC" type="text" pattern="[0-4]" value="" minlength="4" maxlength="4"
-                            placeholder="0000" required />
-                    </div>
-
-                    <div class="d-flex flex-column mb-3 col-12 col-md-6 col-lg-4">
-                        <label for="Amount">
-                            Amount $
-                        </label>
-                        <input name="Amount" type="text" pattern="[1-2000]" value="" minlength="1" placeholder=""
-                            required />
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="d-flex flex-column mb-3 col-12 col-md-6 col-lg-6">
-                        <label for="FirstName">
-                            First Name
-                        </label>
-                        <input name="FirstName" type="text" value="" maxlength="10" placeholder="James" required />
-                    </div>
-
-                    <div class="d-flex flex-column mb-3 col-12 col-md-6 col-lg-6">
-                        <label for="Lastname">
-                            Last Name
-                        </label>
-                        <input name="Lastname" type="text" value="" maxlength="15" placeholder="Hetfield" required />
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="d-flex flex-column mb-3 col-12 col-md-6 col-lg-6">
-                        <label for="city">
-                            City
-                        </label>
-                        <input name="city" type="text" value="" maxlength="15" placeholder="Shibuya" required />
-                    </div>
-
-                    <div class="d-flex flex-column mb-3 col-12 col-md-6 col-lg-3">
-                        <label for="State">
-                            State
-                        </label>
-                        <select name="State">
-                            <option value="Oregon">Oregon </option>
-                            <option value="Delaware">Delaware</option>
-                            <option value="Colorado">Colorado</option>
-                            <option value="Georgia">Georgia</option>
-                        </select>
-                    </div>
-
-                    <div class="d-flex flex-column mb-3 col-12 col-md-6 col-lg-3">
-                        <label for="Postalcode">
-                            Postal Code
-                        </label>
-                        <input name="Postalcode" type="text" pattern="[5]" value="" minlength="4" maxlength="4"
-                            placeholder="0000" required />
-                    </div>
-                </div>
-
-                <div class="row container-fluid">
-                    <div class="d-flex flex-column col-12 col-md-3 col-lg-3 mr-auto">
-                        <label for="radiostarjet">
-                            We accept:
-                        </label>
-                        <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-secondary">
-                                <input autocomplete="off" checked id="blue" name="options" type="radio">
-                                <i class="fa-brands fa-cc-mastercard"></i>
+    <span class="border border-black">
+        <div class="form-wrapper border">
+            <form class="p-3 border border">
+                <h1>Payment form</h1>
+                <div class="alert alert-danger" role="alert"> Some fields are missing! </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="d-flex flex-column mb-3 col-12 col-md-6 col-lg-5">
+                            <label for="Card">
+                                Card #
                             </label>
-                            <label class="btn btn-secondary">
-                                <input autocomplete="off" id="red" name="options" type="radio">
-                                <i class="fab fa-cc-visa"></i>
+                            <input name="Card" type="text" pattern="[0-9]+" value="" minlength="24" maxlength="24"
+                                placeholder="XXXXXXXXXXXXXXXXXXXXXXXX" required />
+
+                        </div>
+                        <div class="d-flex flex-column mb-3 col-12 col-md-6 col-lg-3">
+                            <label for="CVC">
+                                CVC #
                             </label>
-                            <label class="btn btn-secondary">
-                                <input autocomplete="off" id="green" name="options" type="radio">
-                                <i class="fab fa-cc-diners-club"></i>
+                            <input name="CVC" type="text" pattern="[0-9]+" minlength=4" maxlength="4" placeholder="0000"
+                                required />
+                        </div>
+
+                        <div class="d-flex flex-column mb-3 col-12 col-md-6 col-lg-4">
+                            <label for="Amount">
+                                Amount $
                             </label>
-                            <label class="btn btn-secondary">
-                                <input autocomplete="off" id="yellow" name="options" type="radio">
-                                <i class="fab fa-cc-amex"></i>
-                            </label>
+                            <input name="Amount" type="text" pattern="[0-9]+" value="" minlength="1" maxlength="24"
+                                placeholder="XXXXXXXXXXXXXXXXXXXXXXXX" required />
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-lg-6 justify-content-end ms-auto">
-                        <label for="Message">
-                            Message
-                        </label>
-                        <textarea class="form-control" id="Message" rows="4"></textarea>
-                        <small class="text-muted">Add any notes here.</small>
+                    <div class="row">
+                        <div class="d-flex flex-column mb-3 col-12 col-md-6 col-lg-6">
+                            <label for="FirstName">
+                                First Name
+                            </label>
+                            <input name="FirstName" type="text" value="" maxlength="10" placeholder="James" required />
+                        </div>
+
+                        <div class="d-flex flex-column mb-3 col-12 col-md-6 col-lg-6">
+                            <label for="Lastname">
+                                Last Name
+                            </label>
+                            <input name="Lastname" type="text" value="" maxlength="15" placeholder="Hetfield"
+                                required />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="d-flex flex-column mb-3 col-12 col-md-6 col-lg-6">
+                            <label for="city">
+                                City
+                            </label>
+                            <input name="city" type="text" value="" maxlength="15" placeholder="Shibuya" required />
+                        </div>
+
+                        <div class="d-flex flex-column mb-3 col-12 col-md-6 col-lg-3">
+                            <label for="State">
+                                State
+                            </label>
+                            <select name="State">
+                                <option value="Oregon">Oregon </option>
+                                <option value="Delaware">Delaware</option>
+                                <option value="Colorado">Colorado</option>
+                                <option value="Georgia">Georgia</option>
+                            </select>
+                        </div>
+
+                        <div class="d-flex flex-column mb-3 col-12 col-md-6 col-lg-3">
+                            <label for="Postalcode">
+                                Postal Code
+                            </label>
+                            <input name="Postalcode" type="text" pattern="[0-9]+" value="" maxlength="4"
+                                placeholder="0000" required />
+                        </div>
+                    </div>
+
+                    <div class="row container-fluid">
+                        <div class="d-flex flex-column col-12 col-md-3 col-lg-3 mr-auto">
+                            <label for="radiostarjet">
+                                We accept:
+                            </label>
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn btn-secondary">
+                                    <input autocomplete="off" checked id="blue" name="options" type="radio" required>
+                                    <i class="fa-brands fa-cc-mastercard"></i>
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input autocomplete="off" id="red" name="options" type="radio">
+                                    <i class="fab fa-cc-visa"></i>
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input autocomplete="off" id="green" name="options" type="radio">
+                                    <i class="fab fa-cc-diners-club"></i>
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input autocomplete="off" id="yellow" name="options" type="radio">
+                                    <i class="fab fa-cc-amex"></i>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-6 justify-content-end ms-auto">
+                            <label for="Message">
+                                Message
+                            </label>
+                            <textarea class="form-control" id="Message" rows="4"></textarea>
+                            <small class="text-muted">Add any notes here.</small>
+                        </div>
                     </div>
                 </div>
+                <div class="container-fluid btn-group" id="buttons">
+                    <div class="buttons ms-auto">
+                        <button type="submit" class="btn btn-primary">Send</button>
+                        <button type="buttom" class="btn btn-secondary">Cancel</button>
+                    </div>
+                </div>
+            </form>
         </div>
-        <div class="container-fluid" id="buttons">
-            <div class="buttons col-12 col-md-1 col-lg-1 ms-auto">
-                <input class="submitButton1" type="submit" value="Send" />
-                <input class="submitButton2" type="submit" value="Cancel" />
-                </form>
-            </div>
         </div>
-    </div>
-    </div>
 
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+            integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+            crossorigin="anonymous"></script>
+    </span>
 </body>
 
 </html>
